@@ -1,5 +1,7 @@
 package frontiere;
 
+import personnages.Gaulois;
+import java.util.Scanner;
 import controleur.ControlEmmenager;
 
 public class BoundaryEmmenager {
@@ -27,7 +29,12 @@ public class BoundaryEmmenager {
 					break;
 
 				case 2:
-					//TODO a completer
+					System.out.println("Bienvenu villageois"+ nomVisiteur + "Quelle est votre force ?");
+					Scanner sc=new Scanner(System.in);
+					int force = sc.nextInt();
+					controlEmmenager.ajouterGaulois(nomVisiteur,force);
+				    Gaulois gaulois= new Gaulois("Blablacar",force);
+					
 					break;
 
 				default:
