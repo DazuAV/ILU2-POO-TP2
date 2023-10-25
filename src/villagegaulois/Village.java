@@ -22,10 +22,13 @@ public class Village {
 		return nom;
 	}
 
+	
 	public void setChef(Chef chef) {
 		this.chef = chef;
 	}
-
+	public Gaulois[] getVillageois() {
+        return villageois;}
+	
 	public void ajouterHabitant(Gaulois gaulois) {
 		if (nbVillageois < villageois.length) {
 			villageois[nbVillageois] = gaulois;
