@@ -17,23 +17,33 @@ public class BoundaryPrendreEtal {
         
         if (identiteVerifiee) {
             // Le vendeur est connu, recherche d'un étal
-            boolean etalDisponible = controlPrendreEtal.resteEtals();
+            System.out.println("Bonjour"+ nomVendeur + "je vais regarder si je peux vous trouver une étal");
+        	boolean etalDisponible = controlPrendreEtal.resteEtals();
             if (etalDisponible) {
-                int numeroEtal = controlPrendreEtal.prendreEtal(nomVendeur, "produit", 5);
-                if (numeroEtal != -1) {
-                    System.out.println("Étal attribué au vendeur : " + nomVendeur);
-                } else {
-                    System.out.println("Aucun étal disponible.");
-                }
-            } else {
-                System.out.println("Aucun étal disponible.");
+            	installerVendeur(nomVendeur);
+                
             }
         } else {
-            System.out.println(nomVendeur + " ne fait pas partie du village.");
+            System.out.println("Je suis désolée"+ nomVendeur + "mais il faut être un habitant du village pour commencer ici");
         }
     }
 
     private void installerVendeur(String nomVendeur) {
-        // TODO: Ajouter le code pour installer un vendeur sur un étal
+        Scanner sc = new Scanner(System.in);
+    	System.out.println("C'est parfait, il me reste un étale pour vous !");
+        System.out.println("Il me faudrait quelques renseignment:");
+        System.out.println("Quel produit souhaitez-vous vendre ?");
+        String nomprod = sc.nextLine();      
+
+        System.out.println("Combien souhaitez-vous en vendre ?");
+        int nbprod = sc.nextInt();
+        if(controlPrendreEtal.prendreEtal(nomVendeur,nomprod,nbprod)!=-1) {
+            System.out.println("Désolé"+ nomVendeur + "je n'ai plus d'étal qui ne soit pas déjà occupé ");
+
+        }
+        
+        
+        scan.close();
+
     }
 }
