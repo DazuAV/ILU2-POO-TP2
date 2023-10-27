@@ -3,12 +3,14 @@ package controleur;
 import personnages.Druide;
 import personnages.Gaulois;
 import villagegaulois.Village;
+import personnages.Chef;
 
 public class ControlEmmenager {
 	private Village village;
-
+	
 	public ControlEmmenager(Village village) {
 		this.village = village;
+		
 	}
 
 	public boolean isHabitant(String nom) {
