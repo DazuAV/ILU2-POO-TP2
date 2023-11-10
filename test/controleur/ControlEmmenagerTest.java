@@ -12,7 +12,7 @@ class ControlEmmenagerTest {
 	private Chef abraracourcix;
 	
 	
-	@BeforeEach
+	@Test	
 	public void initialiserSituation() {
 		System.out.println("Initialisation");
 		village =new Village ("le village des gaulois",10,5);
@@ -33,12 +33,20 @@ class ControlEmmenagerTest {
 	@Test
 	void testisHabitant() {
 		ControlEmmenager controlEmmenager=new ControlEmmenager(village);
-		
+	    controlEmmenager.ajouterGaulois("abraracourcix",10 );
+	    assertTrue(controlEmmenager.isHabitant("abraracourcix"));
+	    assertFalse(controlEmmenager.isHabitant("Existe pas"));
+	    controlEmmenager.ajouterDuide("Panoramix", 10, 1, 5);
+	    assertTrue(controlEmmenager.isHabitant("Panoramix"));
+
+	    
 	}
-	@Test
-	void testajouterDuide() {
+	
+	//@Test
+	//void testajouterDuide() {
+
 		
-	}
+	//}
 	@Test
 	void testajouterGaulois() {
 		

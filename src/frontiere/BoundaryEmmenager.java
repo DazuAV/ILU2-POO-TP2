@@ -63,6 +63,7 @@ public class BoundaryEmmenager {
 	    controlEmmenager.ajouterDuide(nomVisiteur, forceDruide, effetMinPotion, effetMaxPotion);
 
 	    System.out.println("Bienvenue, druide " + nomVisiteur + "! Vous avez emménagé dans le village.");
+	    
 	}
 	}
 

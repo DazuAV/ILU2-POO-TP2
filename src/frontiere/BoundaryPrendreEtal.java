@@ -37,7 +37,8 @@ public class BoundaryPrendreEtal {
 
         System.out.println("Combien souhaitez-vous en vendre ?");
         int nbprod = sc.nextInt();
-        if(controlPrendreEtal.prendreEtal(nomVendeur,nomprod,nbprod)!=-1) {
+        //a continuer
+        if(controlPrendreEtal.prendreEtal(nomVendeur,nomprod,nbprod)) {
             System.out.println("Désolé"+ nomVendeur + "je n'ai plus d'étal qui ne soit pas déjà occupé ");
 
         }

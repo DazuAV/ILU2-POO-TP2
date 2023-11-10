@@ -3,7 +3,6 @@ package controleur;
 import personnages.Druide;
 import personnages.Gaulois;
 import villagegaulois.Village;
-import personnages.Chef;
 
 public class ControlEmmenager {
 	private Village village;
@@ -17,8 +16,7 @@ public class ControlEmmenager {
 		return village.trouverHabitant(nom) != null;
 	}
 
-	public void ajouterDuide(String nom, int force, int effetPotionMin,
-			int effetPotionMax) {
+	public void ajouterDuide(String nom, int force, int effetPotionMin,int effetPotionMax) {
 		Druide druide = new Druide(nom, force, effetPotionMin, effetPotionMax);
 		village.ajouterHabitant(druide);
 
